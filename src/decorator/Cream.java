@@ -4,10 +4,10 @@ public class Cream extends HotDrinkDecorator{
 	HotDrink drink;
 	
 	double price = 0.1;
-	String description = "Cream";
-	
+		
 	public Cream(HotDrink drink) {
-		this.drink = drink;	
+		this.drink = drink;
+		description = "Cream";
 	}
 	
 	@Override
