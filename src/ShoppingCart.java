@@ -31,7 +31,7 @@ public class ShoppingCart {
 	}
 	
 	public void printCart(){
-		System.out.println(brand + id + ": " + location);
+		System.out.println(brand + ": " + id + ": " + location);
 	}
 
 }

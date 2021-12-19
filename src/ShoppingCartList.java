@@ -10,10 +10,12 @@ public class ShoppingCartList implements Subject {
 	
 	public void addLostCart(ShoppingCart cart) {
 		lostCarts.add(cart);
+		notifyObservers();
 	}
 	
 	public void removeCart(ShoppingCart cart) {
 		lostCarts.remove(cart);
+		notifyObservers();
 	}
 	
 	public ArrayList<ShoppingCart> getList(){
