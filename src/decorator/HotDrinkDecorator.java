@@ -7,6 +7,6 @@ public abstract class HotDrinkDecorator extends HotDrink {
 	}
 	
 	@Override
-	public abstract Double getPrice();
-
+	public abstract int getPrice();//in cents
+ 
 }

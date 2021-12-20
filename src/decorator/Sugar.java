@@ -3,7 +3,7 @@ package decorator;
 public class Sugar extends HotDrinkDecorator{
 	HotDrink drink;
 	
-	double price = 0.05;
+	int price = 5;
 	
 	
 	public Sugar(HotDrink drink) {
@@ -17,8 +17,8 @@ public class Sugar extends HotDrinkDecorator{
 	}
 	
 	@Override
-	public Double getPrice(){
-		return Math.round((drink.getPrice() + price) * 100.00)/100.0;
+	public int getPrice(){
+		return drink.getPrice() + price;
 	}
 
 }

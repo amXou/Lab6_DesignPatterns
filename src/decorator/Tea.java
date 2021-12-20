@@ -1,14 +1,14 @@
 package decorator;
 
 public class Tea extends HotDrink {
-	double price = 0.5;
+	int price = 50;
 	
 	public Tea(){
 		description = "Tea";
 	}
 	
 	@Override
-	public Double getPrice() {
+	public int getPrice() {
 		// TODO Auto-generated method stub
 		return price;
 	}

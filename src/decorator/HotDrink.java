@@ -7,5 +7,5 @@ public abstract class HotDrink {
 		return description;
 	}
 	
-	public abstract Double getPrice();
+	public abstract int getPrice(); //in cents
 }
