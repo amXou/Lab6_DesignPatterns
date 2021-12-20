@@ -10,12 +10,12 @@ public class ShoppingCartList implements Subject {
 	
 	public void addLostCart(ShoppingCart cart) {
 		lostCarts.add(cart);
-		notifyObservers();
+		notifyObservers(cart.getLocation());
 	}
 	
 	public void removeCart(ShoppingCart cart) {
 		lostCarts.remove(cart);
-		notifyObservers();
+		notifyObservers(cart.getLocation());
 	}
 	
 	public ArrayList<ShoppingCart> getList(){
@@ -36,11 +36,11 @@ public class ShoppingCartList implements Subject {
     }
 
     @Override
-    public void notifyObservers() {
+    public void notifyObservers(String location) {
            for (Observer ob : observers) {
        
                   System.out.println("Lost shopping cart detected");
-                  ob.update(lostCarts);
+                  ob.update(location);
            }
 
     }

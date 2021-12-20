@@ -1,20 +1,20 @@
 
 public class Main {
 	public static void main(String[] args) throws InterruptedException {
-		System.out.println("program start");
-		
+		//initialising objects
 		ShoppingCartList list = new ShoppingCartList();
 		Observer o1 = new Observer();
 		list.registerObserver(o1);
 		
-		Store s1 = new Store("Edeka");
-		Store s2 = new Store("Edeka");
+		Store s1 = new Store("Edeka1");
+		Store s2 = new Store("Edeka2");
 		Store s3 = new Store("Aldi");
 		Store s4 = new Store("Lidl");
 		Store s5 = new Store("Kaufhof");
 		Store s6 = new Store("Bauhaus");
 		Store s7 = new Store("Penny");
 		
+		//assign new carts to stores
 		ShoppingCart c1 = new ShoppingCart("001", s1);
 		ShoppingCart c2 = new ShoppingCart("002", s1);
 		ShoppingCart c3 = new ShoppingCart("003", s1);
@@ -27,17 +27,14 @@ public class Main {
 		ShoppingCart c10 = new ShoppingCart("010", s7);
 		ShoppingCart c11 = new ShoppingCart("011", s6);
 		
-		Thread.sleep(1000);
-		
+		//set test values
 		c1.setLocation("behind the trashbin");
 		c4.setLocation("rainbowLand");
-		
+		c11.setLocation("in front of Notre Dame");
 		
 		list.addLostCart(c1);
 		list.addLostCart(c4);
 		list.addLostCart(c11);
-		
-		Thread.sleep(1000);
 		
 		s1.getLostCarts(list);
 		s2.getLostCarts(list);
@@ -56,7 +53,5 @@ public class Main {
 		s6.printLostCarts();
 		s7.printLostCarts();
 		
-		
-		System.out.println("program end");
 	}
 }
